@@ -2,7 +2,7 @@ class Act{
   int flag = 0;
   int choice[] = new int[4];
   int command[] = new int[4];
-  int threat;
+  int threat=0;
   
   void check_flag(){
     if(mouseX >= 360 && mouseX <= 480 && mouseY >= 560 && mouseY <= 620) {

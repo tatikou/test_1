@@ -6,7 +6,7 @@ class Mercy{
       flag = 1;
       fight.flag = 0;
       act.flag = 0;
-      item.flag = 0;     
+      item.flag = 0;
     }
   }
   

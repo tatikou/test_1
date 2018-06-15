@@ -179,11 +179,12 @@ void draw() {
         turn = turn + 1;
         i = millis();
         f10 = 0;
+        act.flag = 0;
       }
     } else if (act.command[1] == 1) {
       act.threat();
-
       if (waiting && (millis() - tcomment2)<= 5500) {
+        cursor.soul();
         return;
       }
       if(f11 == 1){
@@ -191,7 +192,9 @@ void draw() {
         i = millis();
         scared = 1;
         act.threat += 1;
+        act.command[1] = 0;
         f11 = 0;
+        act.flag = 0;
       }
     } else if (act.command[2] == 1) {
       fill(255);
@@ -204,6 +207,7 @@ void draw() {
       }
 
       if (waiting && (millis() - tcomment4)< 8500 ) {
+        cursor.soul();
         return;
       }
       waiting = false;
@@ -245,6 +249,7 @@ void mouseClicked() {
         turn = turn + 1;
         act.threat = 0;
         i = millis();
+        fight.flag = 0;
       }
     }
     
